@@ -8,7 +8,7 @@ config.update("jax_enable_x64", True)
 from .fast_soft_sort import jax_ops
 
 
-def naive_approx_ranks(preds, alpha=100):
+def approx_ranks(preds, alpha=100):
     """
     Computes approximate ranks
     """
@@ -18,7 +18,7 @@ def naive_approx_ranks(preds, alpha=100):
     return .5 + jnp.sum(pairs, axis=1)
     
     
-def approx_ranks(preds):
+def fast_approx_ranks(preds):
     """
     """
     return jax_ops.soft_rank(preds)

@@ -1,1 +1,1 @@
-from .loss import approx_ranks, naive_approx_ranks
+from .loss import approx_ranks, fast_approx_ranks
